@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 Años Contigo · Para Adriana</title>
+
+  <!-- Tipografías: Cormorant (elegante/dorama) · Quicksand (tierna) · Press Start 2P (videojuego) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Lienzo de partículas (estrellas, pétalos, corazones) -->
+  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ PANTALLA INICIAL ============ -->
+  <section id="start-screen" data-screen-label="Inicio">
+    <div class="start-inner">
+      <span class="eyebrow">★ PARA ADRIANA ★</span>
+      <h1 class="start-title">
+        <span class="num">10</span>
+        <span class="word">Años Contigo</span>
+      </h1>
+      <p class="start-sub" id="start-typewriter" aria-live="polite"></p>
+
+      <button id="start-btn" class="btn-start" type="button">
+        <span class="btn-icon">▶</span>
+        <span class="btn-label">EMPEZAR</span>
+      </button>
+
+      <p class="start-foot">Un regalo hecho con <span class="beat">♥</span> &nbsp;·&nbsp; presiona para comenzar la historia</p>
+    </div>
+    <div class="start-glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ HUD DE VIDEOJUEGO ============ -->
+  <header id="hud" aria-hidden="true">
+    <div class="hud-love">
+      <span class="hud-label">NIVEL DE AMOR</span>
+      <div class="hud-bar"><div class="hud-bar-fill" id="love-fill"></div></div>
+      <span class="hud-pct" id="love-pct">0%</span>
+    </div>
+    <div class="hud-right">
+      <span class="hud-days"><span class="days-heart">♥</span> <strong id="days-count">0</strong> días juntos</span>
+      <button id="sound-toggle" class="hud-btn" type="button" title="Sonido" aria-label="Activar o silenciar sonido">🔊</button>
+    </div>
+  </header>
+
+  <!-- ============ LA EXPERIENCIA ============ -->
+  <main id="experience" aria-hidden="true">
+
+    <!-- Intro emotiva tras Start -->
+    <section class="chapter intro" data-screen-label="Prólogo">
+      <div class="intro-inner reveal">
+        <p class="kicker">10 · JUNIO · 2016 — 10 · JUNIO · 2026</p>
+        <h2 class="intro-h">Diez años.<br />Una sola historia.</h2>
+        <p class="typewriter intro-tw" data-text="Hubo un día en que el mundo cambió sin avisarnos… y empezamos nosotros."></p>
+        <p class="scroll-hint">desliza para revivirla ↓</p>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 1 ===== -->
+    <section class="chapter" id="cap1" data-screen-label="Capítulo 1">
+      <div class="chapter-head reveal">
+        <span class="level-badge">NIVEL 01</span>
+        <h2 class="chapter-title">Cuando todo comenzó</h2>
+        <p class="typewriter" data-text="10 de junio de 2016. El día en que dos historias decidieron volverse una."></p>
+      </div>
+
+      <div class="memories">
+        <article class="memory-card reveal">
+          <div class="photo-slot" data-slot="cap1-1" data-placeholder="Una foto de aquellos primeros días 📷"></div>
+          <div class="memory-body">
+            <h3>El primer “hola”</h3>
+            <p>No sabíamos que ese día quedaría grabado para siempre. Solo fue un comienzo… pero fue <em>nuestro</em> comienzo. Desde entonces, cada 10 de junio el calendario se siente un poco mágico.</p>
+          </div>
+        </article>
+
+        <article class="memory-card reveal alt">
+          <div class="photo-slot" data-slot="cap1-2" data-placeholder="Otro recuerdo del inicio 📷"></div>
+          <div class="memory-body">
+            <h3>Las primeras mariposas</h3>
+            <p>Esa sensación de querer hablar contigo a todas horas, de sonreír sin razón al ver tu nombre en la pantalla. Las mariposas de entonces nunca se fueron del todo; solo aprendieron a quedarse.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 2 ===== -->
+    <section class="chapter" id="cap2" data-screen-label="Capítulo 2">
+      <div class="chapter-head reveal">
+        <span class="level-badge">NIVEL 02</span>
+        <h2 class="chapter-title">Nuestras aventuras</h2>
+        <p class="typewriter" data-text="No hizo falta ir muy lejos para vivir cosas enormes."></p>
+      </div>
+
+      <div class="memories">
+        <article class="memory-card reveal">
+          <div class="photo-slot" data-slot="cap2-1" data-placeholder="Un momento cotidiano favorito 📷"></div>
+          <div class="memory-body">
+            <h3>Las aventuras pequeñas</h3>
+            <p>Quizá no salimos mucho, pero hicimos de lo cotidiano nuestro reino: una llamada larga hasta tarde, una serie a medias, una risa a las dos de la mañana. Las mejores aventuras a veces caben en una habitación… o en una pantalla.</p>
+          </div>
+        </article>
+
+        <article class="memory-card reveal alt">
+          <div class="photo-slot" data-slot="cap2-2" data-placeholder="Algo que nos haga reír 📷"></div>
+          <div class="memory-body">
+            <h3>Nuestro mundo entre dos</h3>
+            <p>Aprendimos que una aventura no se mide en kilómetros, sino en compañía. Y contigo, hasta lo más simple se volvió un viaje que valía la pena repetir mil veces.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 3 ===== -->
+    <section class="chapter" id="cap3" data-screen-label="Capítulo 3">
+      <div class="chapter-head reveal">
+        <span class="level-badge">NIVEL 03</span>
+        <h2 class="chapter-title">Lo que superamos juntos</h2>
+        <p class="typewriter" data-text="La distancia lo intentó… pero no contaba con nosotros."></p>
+      </div>
+
+      <div class="memories">
+        <article class="memory-card reveal">
+          <div class="photo-slot" data-slot="cap3-1" data-placeholder="Una foto que acorte la distancia 📷"></div>
+          <div class="memory-body">
+            <h3>El reto de la distancia</h3>
+            <p>Hubo kilómetros entre nosotros, noches en que un abrazo se quedaba en un “buenas noches” por mensaje. La distancia fue el jefe final más difícil de este nivel… y aun así, nunca dejamos de elegirnos.</p>
+          </div>
+        </article>
+
+        <article class="memory-card reveal alt">
+          <div class="photo-slot" data-slot="cap3-2" data-placeholder="Un recuerdo de reencuentro 📷"></div>
+          <div class="memory-body">
+            <h3>Más fuertes que nunca</h3>
+            <p>Cada distancia que cruzamos nos enseñó algo: que lo nuestro no depende de estar cerca, sino de querer estarlo. Lo superamos no a pesar del amor, sino gracias a él.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 4 ===== -->
+    <section class="chapter" id="cap4" data-screen-label="Capítulo 4">
+      <div class="chapter-head reveal">
+        <span class="level-badge">NIVEL 04</span>
+        <h2 class="chapter-title">Nuestro mundo</h2>
+        <p class="typewriter" data-text="Un lugar que no aparece en ningún mapa: lo construimos tú y yo."></p>
+      </div>
+
+      <div class="memories">
+        <article class="memory-card reveal wide">
+          <div class="photo-slot tall" data-slot="cap4-1" data-placeholder="Una foto de nuestro mundo de hoy 📷"></div>
+          <div class="memory-body">
+            <h3>El mundo que somos</h3>
+            <p>Nuestro mundo no necesita ser grande para ser nuestro. Está hecho de manías compartidas, de silencios cómodos, de planes que aún no llegan y de la certeza de que, pase lo que pase, hay un “nosotros” esperando del otro lado.</p>
+            <p class="soft">Y lo mejor… es que apenas estamos empezando a dibujarlo.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO FINAL ===== -->
+    <section class="chapter final" id="capfinal" data-screen-label="Capítulo final">
+      <div class="chapter-head reveal">
+        <span class="level-badge gold">NIVEL FINAL</span>
+        <h2 class="chapter-title">10 años después</h2>
+        <p class="typewriter" data-text="Y aquí estamos. Mismo amor, diez años más fuerte."></p>
+      </div>
+
+      <div class="letter-wrap reveal">
+        <div class="envelope" id="envelope">
+          <div class="env-flap"></div>
+          <div class="env-seal">♥</div>
+          <span class="env-tap">toca para abrir la carta</span>
+        </div>
+
+        <article class="letter" id="letter" hidden>
+          <h3 class="letter-h">Para mi Adriana,</h3>
+          <p>Hoy se cumplen diez años desde aquel 10 de junio en que, sin saberlo, empezamos lo más importante de mi vida. Diez años de aprender a amarte mejor cada día, de cruzar distancias, de convertir lo simple en extraordinario solo porque estabas tú.</p>
+          <p>Gracias por quedarte cuando fue fácil y, sobre todo, cuando no lo fue. Gracias por ser mi aventura favorita, mi lugar seguro y mi mejor historia. Si la vida fuera un juego, contigo siempre elegiría volver a empezar desde la primera pantalla.</p>
+          <p>Te amo hoy más que ayer, y muchísimo menos que mañana. Aquí está nuestra historia… y todo lo que aún nos falta por vivir.</p>
+          <p class="signoff">Feliz aniversario, mi amor. <br /><span class="sign">— Tuyo, siempre</span></p>
+        </article>
+      </div>
+
+      <div class="finale reveal">
+        <p class="finale-stat">Hemos compartido <strong id="days-count-final">0</strong> días, <span id="kisses">incontables</span> sonrisas y un amor que llegó al <strong>100%</strong>.</p>
+        <button id="replay-btn" class="btn-start small" type="button">
+          <span class="btn-icon">↺</span><span class="btn-label">REVIVIR LA HISTORIA</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Notificaciones de logro -->
+  <div id="toast-stack" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
